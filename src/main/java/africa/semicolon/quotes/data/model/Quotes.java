@@ -1,19 +1,17 @@
 package africa.semicolon.quotes.data.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.*;
 
-@Document(collection = "UserQuotes")
+import javax.persistence.Id;
+
+@Document(collection = "Quotes")
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
-public class UserQuotes {
+@AllArgsConstructor
+public class Quotes  {
     @Id
     private String id;
     private String text;

@@ -1,6 +1,6 @@
-package africa.semicolon.quotes.data.model;
+package africa.semicolon.quotes.controller;
 
-import africa.semicolon.quotes.ExternalApiServiceImpl;
+import africa.semicolon.quotes.service.ExternalApiService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,15 +13,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping
 @RequiredArgsConstructor
 public class ExternalApiController {
-    private final ExternalApiServiceImpl externalApiServiceImpl;
+    private final ExternalApiService externalApiService;
     @GetMapping("/api")
-    public ResponseEntity<?> re() {
-        externalApiServiceImpl.getQuoteFromApi();
+    public ResponseEntity<?> fetchQuoteFromApi() {
+        externalApiService.getQuoteFromApi();
         return  new ResponseEntity<>(HttpStatus.CREATED);
     }
     @GetMapping("/get")
     public ResponseEntity<?> getFromDB(){
-        return  new ResponseEntity<>(externalApiServiceImpl.getAllApiQuotes(), HttpStatus.OK);
+        return  new ResponseEntity<>(externalApiService.getAllApiQuotes(), HttpStatus.OK);
 
     }
+
 }

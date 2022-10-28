@@ -1,4 +1,4 @@
-package africa.semicolon.quotes.data.model;
+package africa.semicolon.quotes;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

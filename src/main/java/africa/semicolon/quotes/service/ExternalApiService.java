@@ -1,6 +1,5 @@
-package africa.semicolon.quotes;
+package africa.semicolon.quotes.service;
 
-import africa.semicolon.quotes.data.model.Quotes;
 
 import java.util.List;
 import java.util.Map;

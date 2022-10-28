@@ -1,5 +1,9 @@
-package africa.semicolon.quotes.data.model;
+package africa.semicolon.quotes.service;
 
+import africa.semicolon.quotes.dto.CreateQuoteRequest;
+import africa.semicolon.quotes.dto.QuoteDto;
+import africa.semicolon.quotes.data.repository.UserQuoteRepository;
+import africa.semicolon.quotes.data.model.UserQuotes;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;

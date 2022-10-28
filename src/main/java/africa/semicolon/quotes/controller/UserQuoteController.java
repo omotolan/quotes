@@ -1,5 +1,7 @@
-package africa.semicolon.quotes.data.model;
+package africa.semicolon.quotes.controller;
 
+import africa.semicolon.quotes.dto.CreateQuoteRequest;
+import africa.semicolon.quotes.service.UserQuoteService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

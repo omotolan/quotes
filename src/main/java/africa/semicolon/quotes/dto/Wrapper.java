@@ -1,5 +1,6 @@
-package africa.semicolon.quotes.data.model;
+package africa.semicolon.quotes.dto;
 
+import africa.semicolon.quotes.data.model.Quotes;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

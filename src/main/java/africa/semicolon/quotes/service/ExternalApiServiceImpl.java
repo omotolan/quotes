@@ -1,7 +1,6 @@
 package africa.semicolon.quotes.service;
 
 import africa.semicolon.quotes.data.model.Quotes;
-//import africa.semicolon.quotes.data.model.QuoteDesrializer;
 import africa.semicolon.quotes.data.repository.QuoteRepository;
 import africa.semicolon.quotes.dto.Wrapper;
 import lombok.RequiredArgsConstructor;
@@ -27,7 +26,7 @@ public class ExternalApiServiceImpl  implements ExternalApiService{
     public void getQuoteFromApi() {
         RestTemplate restTemplate = new RestTemplate();
 
-        String url = "${API_URL}";
+        String url = System.getenv("API_URL");
         List<Quotes> quotes = restTemplate.getForObject(url, Wrapper.class).getQuotes();
         quoteRepository.saveAll(quotes);
 
